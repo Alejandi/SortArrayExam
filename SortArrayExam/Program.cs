@@ -8,7 +8,7 @@ namespace SortArrayExam
 {
     class Program
     {
-        static string[] words = new string[] { "ala", "ale", "ana", "len", "voy", "min" };
+        static string[] words = new string[] { "do", "re", "mi", "fa", "sol", "la", "si", "do"};
         static int n = words.Length;
 
         static void Main(string[] args)
@@ -42,7 +42,7 @@ namespace SortArrayExam
 
         private static int comparacion(string word1, string word2)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 char letra1 = word1[i];
                 char letra2 = word2[i];
