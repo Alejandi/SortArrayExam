@@ -8,7 +8,7 @@ namespace SortArrayExam
 {
     class Program
     {
-        static string[] words = new string[] { "do", "re", "mi", "fa", "sol", "la", "si", "do"};
+        static string[] words = new string[] { "do", "re", "mi", "fa", "la", "si"};
         static int n = words.Length;
 
         static void Main(string[] args)
