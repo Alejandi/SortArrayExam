@@ -22,13 +22,13 @@ namespace SortArrayExam
 
                 for (int j = i + 1; j < to; j++)
                 {
-                    int comparacionIzquierda = comparacion(words[from], words[j]);
-                    if (comparacionIzquierda == 1)
+                    int leftComparison = Comparison(words[from], words[j]);
+                    if (leftComparison == 1)
                     {
                         swap(j, from);
                     }
-                    int comparacionDerecha = comparacion(words[to], words[j]);
-                    if (comparacionDerecha == -1)
+                    int rightComparison = Comparison(words[to], words[j]);
+                    if (rightComparison == -1)
                     {
                         swap(to, j);
                     }
@@ -37,20 +37,20 @@ namespace SortArrayExam
                 from++;
                 to--;
             }
-            printArrr(words);
+            printArr(words);
         }
 
-        private static int comparacion(string word1, string word2)
+        private static int Comparison(string word1, string word2)
         {
             for (int i = 0; i < 2; i++)
             {
-                char letra1 = word1[i];
-                char letra2 = word2[i];
-                if (letra1 > letra2)
+                char letter1 = word1[i];
+                char letter2 = word2[i];
+                if (letter1 > letter2)
                 {
                     return 1;
                 }
-                else if (letra1 < letra2)
+                else if (letter1 < letter2)
                 {
                     return -1;
                 }
@@ -64,11 +64,11 @@ namespace SortArrayExam
             words[pos1] = words[pos2];
             words[pos2] = tmp;
         }
-        private static void printArrr(string[] arrayPrint)
+        private static void printArr(string[] arrayToPrint)
         {
             for (int i = 0; i < n; i++)
             {
-                Console.Write($"{arrayPrint[i]}   ");
+                Console.Write($"{arrayToPrint[i]}   ");
             }
             Console.WriteLine();
             Console.ReadLine();
